@@ -1,9 +1,13 @@
 namespace Anagram.Models
 {
-  public class Anagram
+  public class AnagramFinder
   {
-
-    // properties, methods, etc. will go here.
+    public string Word { get; set; }
+    public AnagramFinder(string word)
+    {
+      Word = word;
+    }
+    
 
   }
 }

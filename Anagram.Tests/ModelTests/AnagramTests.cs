@@ -7,7 +7,12 @@ namespace Anagram.Tests
   public class ItemTests
   {
 
-    // Test methods will go here.
+    [TestMethod]
+    public void FormInput_TakesInUserinput_String()
+    {
+      AnagramFinder anagramFinder = new AnagramFinder("dog");
+      Assert.AreEqual(typeof(AnagramFinder), anagramFinder.GetType());
+    }
 
   }
 }
