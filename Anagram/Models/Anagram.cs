@@ -21,5 +21,9 @@ namespace Anagram.Models
     {
       return _instances;
     }
+    public static void AddWordToArray(string phrase)
+    {
+      char[] PhraseArray = phrase.ToCharArray();
+    }
   }
 }

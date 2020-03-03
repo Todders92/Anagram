@@ -17,20 +17,30 @@ namespace Anagram.Tests
     }
 
     [TestMethod]
-      public void AddWordsList_ReturnsWords_String()
-      {
-        //Arrange
-        
-        AnagramFinder anagramFinder = new AnagramFinder("cat");
-        List<AnagramFinder> finalResult = new List<AnagramFinder> {anagramFinder};
+    public void AddWordsList_ReturnsWords_List()
+    {
+      //Arrange
+      
+      AnagramFinder anagramFinder = new AnagramFinder("cat");
+      List<AnagramFinder> finalResult = new List<AnagramFinder> {anagramFinder};
 
-        //Act
-        AnagramFinder.AddWordList(anagramFinder);
-        List<AnagramFinder> result = AnagramFinder.GetAll();
+      //Act
+      AnagramFinder.AddWordList(anagramFinder);
+      List<AnagramFinder> result = AnagramFinder.GetAll();
 
-        //Assert
-        CollectionAssert.AreEqual(finalResult, result);
+      //Assert
+      CollectionAssert.AreEqual(finalResult, result);
+    }
 
-      }
+    [TestMethod]
+
+    public void AddsWordToArray_ReturnsWord_Array()
+    {
+      string phrase = "thing";
+      AnagramFinder anagramFinder = new AnagramFinder(phrase);
+      AnagramFinder.AddWordToArray(phrase);
+      Assert.AreEqual(typeof(AnagramFinder), anagramFinder.GetType());
+    }
+
   }
 }
